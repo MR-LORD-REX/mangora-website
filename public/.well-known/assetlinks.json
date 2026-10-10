@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mangora.app",
+      "sha256_cert_fingerprints": [
+        "43:D9:0A:7C:98:1A:56:AF:28:52:8A:DF:71:7B:9F:EA:54:92:61:49:71:98:8C:A6:9E:4D:DD:9D:00:83:BA:9A"
+      ]
+    }
+  }
+]

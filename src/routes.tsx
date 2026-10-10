@@ -26,6 +26,7 @@ export const routes: RouteRecord[] = [
       { path: 'terms', Component: Terms },
       { path: 'copyright', Component: Copyright },
       { path: 'manga/:id', Component: MangaLanding },
+      { path: 'oneshot/:id', Component: MangaLanding },
       { path: '*', Component: NotFound },
     ],
   },

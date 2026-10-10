@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useSearchParams, useParams } from 'react-router-dom'
+import { useLocation, useSearchParams, useParams } from 'react-router-dom'
 import { Download, ExternalLink } from 'lucide-react'
 import { Seo } from '../components/ui/Seo'
 import { Section } from '../components/ui/Section'
@@ -13,6 +13,9 @@ import { SITE } from '../lib/site'
  */
 export default function MangaLanding() {
   const { id = '' } = useParams<{ id: string }>()
+  const location = useLocation()
+  // /manga/... covers chapter sources; gallery (one-shot) shares use /oneshot/....
+  const kind = location.pathname.startsWith('/oneshot') ? 'oneshot' : 'manga'
   const [params] = useSearchParams()
   const provider = params.get('provider') ?? ''
   const title = params.get('title') ?? ''
@@ -22,7 +25,7 @@ export default function MangaLanding() {
     setOrigin(window.location.origin)
   }, [])
 
-  const intentUrl = `intent://manga/${encodeURIComponent(id)}?provider=${encodeURIComponent(
+  const intentUrl = `intent://${kind}/${encodeURIComponent(id)}?provider=${encodeURIComponent(
     provider,
   )}#Intent;scheme=mangora;package=${SITE.packageId};end`
 
@@ -31,7 +34,7 @@ export default function MangaLanding() {
       <Seo
         title={title ? `Read ${title} in Mangora` : 'Open in Mangora'}
         description="Mangora is a free Android manga and manhwa reader with offline downloads and AI translation. Install it to open this series, or download the app."
-        path={`/manga/${encodeURIComponent(id)}`}
+        path={`/${kind}/${encodeURIComponent(id)}`}
       />
       <Section className="py-20">
         <div className="mx-auto max-w-xl rounded-lg border border-line bg-surface p-8 text-center">
@@ -60,7 +63,7 @@ export default function MangaLanding() {
 
           {origin ? (
             <p className="mt-6 font-mono text-xs break-all text-muted/70">
-              On-device link: mangora://manga/{id}
+              On-device link: mangora://{kind}/{id}
             </p>
           ) : null}
         </div>
