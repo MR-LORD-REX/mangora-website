@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /manga/
+
+Sitemap: https://mangora-web.web.app/sitemap.xml
