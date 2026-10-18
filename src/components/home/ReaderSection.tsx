@@ -1,7 +1,5 @@
 import { Columns3, Rows3, ScanLine, SlidersHorizontal } from 'lucide-react'
 import { Section } from '../ui/Section'
-import { PhoneFrame } from '../ui/PhoneFrame'
-import { Screenshot } from '../ui/Screenshot'
 import { Reveal } from '../ui/Reveal'
 
 const MODES = [
@@ -14,18 +12,8 @@ const MODES = [
 export function ReaderSection() {
   return (
     <Section className="border-t border-line">
-      <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
-        <Reveal className="order-2 lg:order-1">
-          <PhoneFrame>
-            <Screenshot
-              src="/assets/screenshots/reader-scroll.png"
-              alt="Mangora reading a long-strip chapter in vertical scroll mode"
-              fallbackLabel="reader-scroll.png"
-            />
-          </PhoneFrame>
-        </Reveal>
-
-        <Reveal className="order-1 lg:order-2">
+      <div className="mx-auto max-w-4xl">
+        <Reveal>
           <p className="mb-3 font-mono text-xs font-medium tracking-[0.18em] text-accent uppercase">The reader</p>
           <h2 className="font-display text-2xl font-semibold text-balance sm:text-3xl lg:text-4xl">
             Four ways to read, and neither is an afterthought

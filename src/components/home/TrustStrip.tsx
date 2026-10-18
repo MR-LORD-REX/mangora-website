@@ -1,13 +1,12 @@
-import { Cpu, Download, Languages, Lock, Plug, Users } from 'lucide-react'
+import { Cpu, Download, Languages, Plug, Wifi } from 'lucide-react'
 import { Container } from '../ui/Container'
 
 const ITEMS = [
-  { Icon: Plug, label: '8 sources' },
+  { Icon: Plug, label: 'User-installed extensions' },
   { Icon: Download, label: 'Offline downloads' },
   { Icon: Cpu, label: 'On-device OCR' },
   { Icon: Languages, label: 'AI translation' },
-  { Icon: Users, label: 'No account' },
-  { Icon: Lock, label: 'Open source' },
+  { Icon: Wifi, label: 'Offline reading' },
 ]
 
 export function TrustStrip() {

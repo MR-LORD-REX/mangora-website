@@ -1,7 +1,5 @@
 import { Bell, FolderDown, HardDrive, Wifi } from 'lucide-react'
 import { Section } from '../ui/Section'
-import { PhoneFrame } from '../ui/PhoneFrame'
-import { Screenshot } from '../ui/Screenshot'
 import { Reveal } from '../ui/Reveal'
 
 const POINTS = [
@@ -25,28 +23,11 @@ export function OfflineSection() {
         </p>
       </div>
 
-      <div className="mt-14 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <Reveal className="flex justify-center gap-6">
-          <PhoneFrame className="max-w-[240px]">
-            <Screenshot
-              src="/assets/screenshots/downloads.png"
-              alt="The Mangora downloads library showing downloaded series"
-              fallbackLabel="downloads.png"
-            />
-          </PhoneFrame>
-          <PhoneFrame className="mt-10 hidden max-w-[240px] sm:block">
-            <Screenshot
-              src="/assets/screenshots/download-queue.png"
-              alt="The Mangora download queue with its foreground notification"
-              fallbackLabel="download-queue.png"
-            />
-          </PhoneFrame>
-        </Reveal>
-
+      <div className="mt-14">
         <Reveal>
-          <ul className="grid gap-6 sm:grid-cols-2">
+          <ul className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
             {POINTS.map(({ Icon, title, body }) => (
-              <li key={title}>
+              <li key={title} className="rounded-lg border border-line bg-surface p-5">
                 <span className="mb-3 inline-flex size-10 items-center justify-center rounded-md border border-line bg-surface-high text-accent">
                   <Icon aria-hidden="true" className="size-5" strokeWidth={1.75} />
                 </span>

@@ -1,164 +1,106 @@
 # Privacy Policy
 
-**Last updated: October 10, 2026**
+**Last updated: October 18, 2026**
 
-Mangora (“Mangora,” “we,” “us,” or “our”) is a reader application for Android and a companion website. We designed Mangora to operate with minimal data collection.
+This Privacy Policy explains how the Mangora Android application and website handle information. Mangora has no user-account system. Core library, reading-progress, settings, download-index, and translation-cache data are stored on your device. Using extensions, checking releases, or enabling online OCR or translation also makes network requests to remote endpoints operated by the project or external services.
 
-This Privacy Policy explains what information Mangora handles, how that information is used, and when information may be transmitted to third parties.
+This policy describes the current implementation, not the separate policies of external operators. Review those operators' notices before sending them information. Features and endpoints can change; this policy will be updated when the project's data practices materially change.
 
+## 1. Who this policy covers
 
-## 1. Information Mangora Does Not Collect
+"Mangora," "we," or "the project" refers to the maintainers of the Mangora application and website. This policy covers data handled by the application and website under project control. It does not govern an extension repository, an installed extension, a content website, Google, GitHub, Hugging Face Spaces, Firebase Hosting, your Android device manufacturer, or your network provider.
 
-Mangora is designed not to require or provide the following:
+## 2. Accounts, advertising, and analytics
 
-- **No user accounts or sign-in.** Mangora does not require you to create an account.
-- **No analytics or telemetry.** We do not use analytics, behavioral tracking, or telemetry services.
-- **No crash-reporting service.** Mangora does not send crash reports to a Mangora-operated server or third-party crash-reporting platform.
-- **No advertising.** Mangora does not display advertisements or use advertising identifiers.
-- **No tracking cookies on the website.** The Mangora website does not use tracking cookies.
+The Android app does not require a Mangora account, and the project does not operate an account database for app users. The current app and website source do not include a Mangora analytics, advertising, or cross-site tracking SDK. The project does not operate an account backend or central database for your library, reading history, downloads, or settings.
 
-## 2. Information Stored on Your Device
+This does not mean network requests are anonymous. A remote endpoint receiving a request can ordinarily observe technical request information such as your IP address, request time, requested URL, user-agent or client details, and information included in request headers. Hosting platforms may also maintain their own operational logs.
 
-Mangora stores certain information locally on your Android device so that the application can provide its features.
+## 3. Information stored on your device
 
-### Library, Reading History, and Settings
+The Android app stores information needed for its features in app-private files, SQLite, and cache directories. Depending on your use, this can include:
 
-Your libraries, reading progress, reading history, downloaded content, and application settings are stored locally on your device.
+- Library names and membership, series and chapter metadata, cover URLs, reading history, reading progress, and source/extension identifiers.
+- App settings, including selected extension repository URLs, reader preferences, OCR/translation modes, and the Gemini API key you choose to save.
+- Download queue status and metadata, local page caches, downloaded `.cbz` archives, and the storage-folder permission you grant through Android's system file picker.
+- Translation-cache data, including OCR/source text, translated text, language choices, page identifiers, and overlay coordinates.
+- Translation usage counters used to display Gemini quota estimates.
 
-Mangora does not upload this locally stored application data to servers operated by Mangora.
+Settings are stored in an app-private JSON file and mirrored in the local database. The Gemini key is stored on the device; Mangora does not upload it to a Mangora-operated server. The key is sent to Google when you validate it or use Gemini translation. The key is sensitive: keep your device and exported backups secure.
 
-Where applicable, application data is stored using a local SQLite database.
+The app may retain downloaded archives in the folder you selected even if you clear app data or uninstall Mangora. App-private data and caches may be removed when you clear app storage or uninstall, subject to Android behavior. You can delete downloads, library/history entries, and translation-cache entries in the app where those controls are available.
 
-### Backups
+## 4. Backups and file access
 
-Mangora allows you to create a backup of applicable local application data.
+If you create a backup, Mangora serializes its local SQLite database to a `.db` file in the folder you select using Android's document picker. The database can include the information listed above, including settings mirrored into SQLite and translation text. The project does not automatically upload this file. A backup may not be encrypted by Mangora; store it somewhere you trust and do not share it unless intended.
 
-When you create a backup, Mangora writes the database to a folder that you select through the Android system file picker. The backup is stored as a `.db` file.
+Mangora accesses folders and files for which you grant Android's system file-picker permission. This includes the selected folder for downloads and backups, and selected backup files for restore. Mangora does not need broad access to all files for those operations.
 
-The backup remains under your control. Mangora does not automatically upload backups to a Mangora-operated server.
+## 5. Information sent by reading extensions
 
-### Downloaded Content
+You choose whether to add an extension repository and install an extension. When you add or refresh a repository, the app requests its catalog metadata and may request extension icons or APK files. When you browse, search, open a series, read pages, or download a chapter, the installed extension can make requests to the endpoints it implements or selects.
 
-When you download chapters for offline reading, Mangora stores the downloaded content as `.cbz` archives in a folder selected by you through the Android system file picker.
+Those requests can reveal your IP address, request times, requested titles or page URLs, app/client headers, and other request details to the repository, extension, content website, CDN, or network service involved. Depending on the extension and service, requests may include cookies or other headers used for sessions or access checks. Mangora does not control those recipients' collection, retention, or use of information.
 
-Mangora only writes to the storage location you authorize through the system file picker and does not upload your downloaded files to Mangora-operated servers.
+Mangora does not provide or curate a universal content catalog. Removing a repository from your settings does not necessarily delete extension software already installed or files already downloaded. Manage extensions and downloaded files in Android and in the app as appropriate.
 
-## 3. Information Sent to Third-Party Services
+## 6. OCR and translation
 
-Some Mangora features can send information from your device to third-party services. These features are optional and are only used when you enable or configure them.
+Translation is off by default. Text recognition and translation happen only when you start or enable those reader features. The app may download an OCR model the first time you use it; that model download is a network request to the model's distribution host.
+
+### On-device OCR
+
+When the local OCR backend is selected, Mangora downloads the page image through the relevant extension/service as needed, then detects and recognizes text on the device. The OCR crop is not sent to the cloud OCR endpoint in this mode. The underlying page request still goes to the extension or content endpoint, and the downloaded image may be stored temporarily in the app cache.
 
 ### Cloud OCR
 
-Mangora can provide OCR (optical character recognition) using either an on-device OCR engine or a cloud OCR service.
+When cloud OCR is selected, Mangora crops detected page regions on the device and posts those image crops, along with the selected language information, to the cloud OCR endpoint currently configured in the app: `https://ilcapitano01-manga-tr-api.hf.space`. The endpoint operator and the hosting platform may receive and process the crops and request metadata under their own practices. The project cannot guarantee their retention or handling. Do not use cloud OCR for material you are not comfortable transmitting to that service.
 
-If you choose cloud OCR, image crops containing detected text are sent from your device to the third-party OCR endpoint you configure.
+### Free translation
 
-Those images leave your device and are subject to the privacy practices and terms of the provider you select.
+When the free translation mode is selected, Mangora sends recognized text and source/target language information to Google's public translation endpoints. The request is made from your device; it does not pass through a Mangora server. Google may process the text and request metadata under Google's terms and privacy policy.
 
-If you use on-device OCR instead, the OCR processing occurs locally on your device.
+### Gemini AI translation
 
-### AI Translation
+When AI translation is selected and you start translation, Mangora sends OCR text for the current batch and, if configured, text from previous pages as context to the Gemini API using the API key stored on your device. A key-validation request also contacts Google. Image crops are not included in the Gemini translation request by this implementation; cloud OCR, if selected, separately sends its crops as described above. Google receives the request and may process it under the terms and settings applicable to your API account.
 
-Mangora can optionally use Google's Gemini API to provide AI-assisted translation.
+## 7. Updates and the Mangora website
 
-When AI translation is enabled:
+The Android app can contact GitHub to check for release metadata and download an APK when you use the updater. The website is hosted on Firebase Hosting and requests release metadata and project release notes directly from GitHub APIs or raw-content endpoints in your browser. The website temporarily caches some release responses in browser `sessionStorage`; this cache is session-scoped and is not a Mangora account or server-side profile.
 
-- Relevant page content and OCR text may be sent from your device to Google's Gemini API.
-- Requests are made using the **Gemini API key you provide**.
-- Mangora does not proxy these requests through a Mangora-operated server.
-- Your use of the Gemini API is also subject to Google's applicable terms and privacy practices.
+GitHub and Firebase Hosting may receive standard request information, including IP address, user-agent, requested URLs, and request times, and may maintain service logs or security records under their own policies. Download links may take you to GitHub or Telegram, whose policies apply to your use of those services.
 
-You are responsible for obtaining and maintaining your own Gemini API key and for any applicable charges or usage limits associated with that key.
+The current website source does not include an analytics or advertising SDK. No statement here prevents the hosting platform, browser, or an external destination from using its own operational storage, cookies, or logs.
 
-### Content Providers
+## 8. How long information is kept
 
-Mangora retrieves manga, comic, gallery, or other reading content from the provider you select.
+Mangora does not receive or centrally retain the app data described as local in this policy. Local data remains until you delete it, clear app storage, uninstall the app, or remove the relevant files. Cache cleanup and Android storage behavior can vary by device. Files saved to your chosen external folder may remain after app data is cleared.
 
-When you browse or read content, requests are made directly from your device to the selected provider or its associated infrastructure. The provider may therefore receive information normally associated with a request, such as your IP address, browser or application user-agent information, requested URLs, and other information that the provider may collect.
+External repositories, OCR/translation operators, GitHub, Firebase Hosting, and content services determine their own retention periods. Contact the relevant operator for information about its data practices or requests.
 
-Mangora does not control the privacy practices, data retention, or policies of these third-party providers. You should review the privacy policies and terms of the providers you access through Mangora.
+## 9. Sharing and sale
 
-### When Optional Services Are Disabled
+The project does not sell personal information and does not operate a Mangora server that routinely receives the local reading library or history. Information is sent to external endpoints when required for a feature you use, as explained above. External operators may disclose information under their own terms, legal obligations, or service arrangements; Mangora cannot control those disclosures.
 
-If you do not enable cloud OCR or AI translation, Mangora does not send OCR images or translation requests to those services.
+## 10. Security
 
-## 4. Website
+Mangora uses Android app-private storage for app-managed settings and database files, but it does not promise that local storage or network transmission is completely secure. The app does not claim that API keys or database backups are encrypted by Mangora. Protect your device, selected storage folders, backups, and credentials. External services are responsible for their own security practices.
 
-The Mangora website is designed to be a static website.
+## 11. Children and age-restricted material
 
-The website:
+Mangora is not directed to children. Third-party extensions may expose mature or age-restricted material; app filters cannot guarantee that all such material is blocked. Parents and guardians should supervise use and assess whether the app and extensions are appropriate.
 
-- Does not use analytics services.
-- Does not use advertising or advertising identifiers.
-- Does not use tracking cookies.
-- Fetches release information and release metadata directly from GitHub.
-- May allow your browser to temporarily cache release metadata locally.
+## 12. Your choices and requests
 
-GitHub and other third-party services may process information associated with requests to their services in accordance with their own privacy policies.
+You can choose whether to add repositories, install extensions, download chapters, enable cloud OCR, or use online translation. You can select local OCR, turn translation off, clear translation-cache entries, delete app records, or uninstall the app. Removing app data does not necessarily remove files saved in a user-selected folder or data held by an external service.
 
-## 5. Age-Restricted Content
+Because the project has no user account system and does not maintain a central reading-history database, it generally cannot retrieve or delete data held only on your device. For information or deletion requests about data held by a repository, extension, content site, OCR/translation provider, or hosting platform, contact that operator directly.
 
-Mangora is not directed toward children.
+## 13. Changes and contact
 
-Mangora may provide access to sources containing adult-oriented or age-restricted material. Access to applicable sources is controlled by an opt-in setting and is disabled by default.
-
-Parents and guardians are responsible for determining whether Mangora is appropriate for a particular user.
-
-## 6. Data Security
-
-Because Mangora is designed to keep application data on your device and does not operate a central account system, there is no Mangora account database containing your library, reading history, or application settings.
-
-However, no method of electronic storage or transmission can be guaranteed to be completely secure. You are responsible for maintaining the security of your device, files, backups, API keys, and any third-party services you configure.
-
-## 7. Third-Party Services
-
-Mangora may interact with third-party services that you choose to access or configure, including:
-
-- Content and reading providers
-- Cloud OCR providers
-- Google's Gemini API
-- GitHub, for website release information and metadata
-
-These third parties operate independently of Mangora and may collect or process information according to their own privacy policies and terms.
-
-Mangora does not control the privacy practices of these third parties.
-
-## 8. Your Choices
-
-You can control several aspects of Mangora's data handling through the application:
-
-- You can choose whether to use cloud OCR or on-device OCR where supported.
-- You can enable or disable AI translation.
-- You can choose the storage location used for downloaded content and backups.
-- You can manage and delete locally stored libraries, history, downloads, and other application data through the application.
-- You can choose whether to access individual content providers.
-
-You can also use your Android device's settings to clear Mangora's application data or uninstall the application.
-
-Clearing application data or uninstalling Mangora may permanently remove locally stored application data that has not been backed up.
-
-## 9. Children's Privacy
-
-Mangora is not directed at children and does not knowingly collect personal information from children.
-
-Because Mangora does not require user accounts and is designed to minimize data collection, it does not intentionally maintain profiles of individual users.
-
-If you believe that a child has provided personal information to a Mangora-operated service, please contact us so that the matter can be reviewed.
-
-## 10. Changes to This Privacy Policy
-
-We may update this Privacy Policy when Mangora's features, services, or data practices change.
-
-The **“Last updated”** date at the beginning of this Privacy Policy indicates when this policy was most recently revised.
-
-If material changes are made, we may provide additional notice through the Mangora application or website where appropriate.
-
-## 11. Contact
-
-If you have questions, concerns, or requests regarding this Privacy Policy or Mangora's privacy practices, please contact the Mangora project through its official project repository or community channels, including Telegram or Reddit.
+We may update this Privacy Policy when the app, website, or data practices change. The date at the beginning identifies the latest revision. Questions about Mangora's own practices can be raised through official project channels linked from the [Mangora website](/). Do not include API keys or sensitive personal information in a public report.
 
 ---
 
-**Mangora**
-
-**Privacy Policy — Last updated October 10, 2026**
+**Mangora — reader and translation software**  
+**Last updated: October 18, 2026**

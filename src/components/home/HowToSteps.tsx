@@ -5,7 +5,7 @@ import { Reveal } from '../ui/Reveal'
 
 const STEPS = [
   { title: 'Install the APK', body: 'Grab the ARM64 build and allow installs from unknown sources on Android.', to: '/how-to-use#install' },
-  { title: 'Add your sources', body: 'Browse the built-in providers, search inside one or across your library.', to: '/how-to-use#sources' },
+  { title: 'Choose an extension', body: 'Add a compatible extension repository and install the extension you choose.', to: '/how-to-use#extensions' },
   { title: 'Read and translate', body: 'Pick a reader mode, then turn on OCR and AI translation for any page.', to: '/how-to-use#translation' },
   { title: 'Download for offline', body: 'Queue chapters to a folder you choose and read them with no connection.', to: '/how-to-use#downloads' },
 ]

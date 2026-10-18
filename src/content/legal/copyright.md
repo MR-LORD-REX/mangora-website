@@ -1,77 +1,56 @@
 # Copyright and DMCA Policy
 
-**Last updated: 2026-10-10**
+**Last updated: October 18, 2026**
 
+## 1. Mangora's role
 
-## 1. Overview
+Mangora is a reader and translation application. It includes an extension host that can run software and communicate with repositories and services selected by the user. Mangora does not operate the repositories or third-party content websites used by an installed extension, and the Mangora website does not host chapters or galleries.
 
-Mangora is a reader application. It does not host, publish, or operate a repository of manga, manhwa, comics, galleries, or other third-party media.
+Material displayed through an extension is controlled by the extension, the relevant website or service, and/or the rights holder—not by Mangora. Mangora does not determine whether such material is licensed, authorized, public domain, or infringing. The appearance of material in the app does not mean Mangora reviewed, approved, endorsed, or licensed it.
 
-Content accessed through Mangora is fetched from third-party websites or services selected or configured by the user. Mangora does not claim ownership of, control over, or responsibility for content hosted by those third-party providers.
+No statement in this policy guarantees immunity from a claim or determines whether Mangora has any legal responsibility under a specific law or set of facts. Applicable law controls.
 
-## 2. Copyright and Third-Party Content
+## 2. Reports about third-party material
 
-Copyright and other intellectual-property rights in third-party content remain with their respective owners or licensors.
+If you believe material accessed through Mangora infringes your copyright or other rights, send your notice to the extension or service operator that controls the material, and/or to the hosting platform responsible for the relevant URL. Include the exact URL or location of the material so the responsible party can identify it.
 
-Mangora does not determine whether content made available by a third-party provider is authorized, licensed, infringing, or otherwise lawful. The availability of content through Mangora does not constitute an endorsement, authorization, or grant of rights by Mangora.
+Mangora cannot remove material from an independently operated website, repository, CDN, or service that it does not control. A notice sent to Mangora is not a substitute for contacting the party that hosts or serves the material. We cannot promise to identify the operator for you, forward a notice, or remove a third party's material.
 
-If you believe that material accessed through Mangora infringes your copyright or other intellectual-property rights, you should direct your complaint to the third-party provider responsible for hosting or serving that material.
+The Mangora app's available extensions and repositories may be selected or installed by each user and can vary from device to device. The project does not maintain a complete inventory of user-selected repositories or their contents.
 
-## 3. Takedown Requests
+## 3. Reports about material controlled by Mangora
 
-Because Mangora does not host or control the third-party material displayed through the application, Mangora generally cannot remove such material from the source provider.
+If you believe that a file, page, or other material published through an official Mangora-controlled repository or website infringes your rights, contact the project through the official channels linked from the Mangora website and identify the exact project-controlled material. Do not post confidential personal information or API keys in a public issue or community forum. If you need a private channel to provide supporting documents, first ask through an official channel for a private contact method.
 
-Copyright owners or their authorized representatives should submit takedown requests to the provider that hosts or serves the allegedly infringing material. Each provider is responsible for maintaining its own copyright policies, procedures, and contact information.
+To help evaluate a report, include:
 
-Where appropriate and where Mangora has the ability to do so, the project may provide general information about the relevant third-party provider to help rights holders identify the appropriate party to contact.
+- Your name and a reliable contact method.
+- Identification of the copyrighted work or other right you own or are authorized to represent.
+- The exact URL, file path, version, or other location of the material you believe is infringing.
+- A short explanation of the alleged infringement and the relationship between the identified work and material.
+- A statement that you have a good-faith belief that the use is not authorized by the rights holder, its agent, or law.
+- A statement that the information in your report is accurate and, if you are acting for another party, that you are authorized to do so.
+- Your physical or electronic signature, where required by the procedure or law you are invoking.
 
-## 4. Notices Concerning Mangora's Own Content
+Please send only information needed to identify and assess the specific material. The project may request clarification, preserve relevant communications, remove or restrict material it controls, or take no action if the report is incomplete or concerns material outside its control. Nothing here promises a particular outcome, response time, or legal procedure.
 
-If you believe that material **owned or controlled by the Mangora project itself** infringes your copyright or other intellectual-property rights, you may contact the project through its official communication channels.
+## 4. Notices for GitHub-hosted material
 
-Please provide sufficient information for the project to identify the material and understand the basis of your claim, including:
+Some project code, release files, and documentation may be hosted by GitHub. GitHub controls its platform and has its own intellectual-property reporting process. For material hosted on GitHub, you may also use GitHub's current [DMCA takedown request process](https://github.com/contact/dmca). A report to GitHub does not automatically notify the Mangora maintainers.
 
-- Identification of the copyrighted work or other protected material;
-- Identification of the allegedly infringing material;
-- The location of the material, where applicable;
-- Your name and contact information;
-- A description of your rights in the material; and
-- Any other information reasonably necessary to evaluate the claim.
+## 5. No designated-agent or safe-harbor representation
 
-The project may request additional information where necessary.
+This page is an informational project policy. It is not a representation that Mangora is registered as a designated agent under the U.S. Digital Millennium Copyright Act, qualifies for any safe harbor, or has adopted a formal counter-notice procedure. Rights holders should direct complaints about material to the party that controls or hosts it and use the applicable platform's official process.
 
-Nothing in this section creates an obligation for Mangora to remove third-party material that it does not host or control.
+## 6. Project and third-party rights
 
-## 5. Mangora Project Materials
+Mangora code, project branding, screenshots, libraries, models, fonts, and other project assets may have different owners and license terms. Third-party content, names, marks, and materials remain with their respective rights holders. Neither use of Mangora nor a third-party reference grants a license to copy, distribute, translate, or publish material.
 
-Mangora's name, logo, source code, documentation, website materials, and other project assets are subject to their respective ownership and licensing terms.
+## 7. Policy changes
 
-Mangora's source code is open-source and is made available under the applicable license or licenses specified by the project repository. Open-source availability does not necessarily mean that every project name, logo, graphic, or other branding element is freely available for use.
-
-You should consult the applicable project license and repository documentation before redistributing or modifying Mangora.
-
-## 6. Screenshots and Project Website
-
-Screenshots displayed on the Mangora website or in project documentation are intended to demonstrate the Mangora application and its user interface.
-
-Where applicable, screenshots may contain interface elements, provider names, or other identifying information belonging to third parties. Such names, marks, and identifying elements remain the property of their respective owners.
-
-## 7. Trademarks
-
-Third-party names, trademarks, service marks, logos, and other branding displayed in or referenced by Mangora belong to their respective owners.
-
-Their use within the application or project materials is for identification, compatibility, informational, or descriptive purposes and does not imply any affiliation, sponsorship, authorization, or endorsement by those owners unless expressly stated otherwise.
-
-Mangora does not claim ownership of third-party trademarks.
-
-## 8. Policy Changes
-
-This policy may be updated as the Mangora project, its website, or its features change.
-
-When this policy is updated, the **“Last updated”** date will be revised accordingly.
+This policy may be updated as the project, application, or applicable procedures change. The date above indicates the latest revision.
 
 ---
 
-**Mangora**  
-Free and open-source manga/manhwa reader  
-**Last updated: 2026-10-10**
+**Mangora — reader and translation software**  
+**Last updated: October 18, 2026**

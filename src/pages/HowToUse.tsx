@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { Seo } from '../components/ui/Seo'
 import { Section } from '../components/ui/Section'
-import { SITE_LINKS } from '../lib/links'
 
 interface GuideSection {
   id: string
@@ -41,7 +40,7 @@ const SECTIONS: GuideSection[] = [
     ),
     gotchas: [
       'Very tall webtoon pages decode through native subsampling, so the first screens of a long strip may fill in progressively.',
-      'Comix downloads need the app in the foreground, because its page URLs depend on the in-app browser session.',
+      'Some extensions may require an active session or foreground browsing for their content to remain available.',
     ],
   },
   {
@@ -65,13 +64,13 @@ const SECTIONS: GuideSection[] = [
     what: 'Mangora detects the text on a page, reads it, translates it and draws the result back over the artwork as an overlay.',
     how: (
       <>
-        Open a page and enable text detection, then translation. On-device OCR runs through ExecuTorch with no
-        network; alternatively point Mangora at a cloud OCR endpoint you configure, and add your own Gemini API
-        key for translation.
+        Translation is off by default. Free translation sends recognized text to Google's translation service.
+        AI translation sends recognized text to Gemini using the API key you provide. Cloud OCR sends page
+        crops to the service configured in the app; on-device OCR processes crops locally.
       </>
     ),
     gotchas: [
-      'Cloud OCR and AI translation send page crops and detected text to a third party, using your own key — see the privacy policy.',
+      'Online translation and cloud OCR involve external services and transmit text or image crops. Review the Privacy Policy before enabling them.',
       'Translation quality depends on the model and the key you supply; adjust the overlay text scale to fit the bubbles.',
     ],
   },
@@ -88,25 +87,19 @@ const SECTIONS: GuideSection[] = [
     gotchas: ['Keep the exported .db somewhere safe — it is the only copy of your library state.'],
   },
   {
-    id: 'sources',
-    heading: 'Sources',
-    what: 'Eight sources ship built in, and they all open in the same reader with the same controls.',
+    id: 'extensions',
+    heading: 'Extensions and reading services',
+    what: 'Mangora includes an extension host, not a built-in catalogue or content service. You choose whether to connect a repository and install its extension.',
     how: (
       <>
-        Browse the source list, search inside a source or across your library, and organize series into
-        unlimited named libraries.
+        Add a compatible repository in Browse, review its listings, and install the extension you choose using
+        Android's package installer. Installed extensions provide catalog and search results and retrieve
+        material from their own endpoints.
       </>
     ),
     gotchas: [
-      <>
-        Mangora supports additional sources beyond the ones shown on the home page. The full provider list,
-        including adult-oriented sources, is in the{' '}
-        <a href={SITE_LINKS.githubReadmeSources} target="_blank" rel="noreferrer noopener">
-          project README
-        </a>
-        ; an opt-in age gate for those is planned.{' '}
-      </>,
-      'Mangora hosts no content — it fetches live from each provider when you read.',
+      'Repositories, extensions and content services are independently operated. Mangora does not verify their authorization, legality, safety or privacy practices.',
+      'Requests made while browsing, reading or downloading may disclose your IP address and request details to those services. See the Terms and Privacy Policy.',
     ],
   },
 ]

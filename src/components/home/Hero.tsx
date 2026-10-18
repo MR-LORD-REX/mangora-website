@@ -1,9 +1,7 @@
-import { ArrowRight, Download } from 'lucide-react'
+import { ArrowRight, Download, Languages, ScanText, Sparkles } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Container } from '../ui/Container'
 import { Button } from '../ui/Button'
-import { PhoneFrame } from '../ui/PhoneFrame'
-import { TranslationSlider } from './TranslationSlider'
 import { SITE } from '../../lib/site'
 
 export function Hero() {
@@ -29,7 +27,7 @@ export function Hero() {
             variants={item}
             className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs tracking-wide text-muted"
           >
-            Free &middot; Open source &middot; Android
+            Free &middot; Android
           </motion.p>
           <motion.h1
             variants={item}
@@ -62,11 +60,30 @@ export function Hero() {
           initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          className="mx-auto w-full max-w-md"
         >
-          <PhoneFrame className="rotate-0 lg:rotate-1">
-            <TranslationSlider />
-          </PhoneFrame>
-          <p className="mt-4 text-center text-xs text-muted">Drag the handle to compare</p>
+          <div className="rounded-xl border border-line bg-surface p-6 shadow-2xl sm:p-8">
+            <p className="font-mono text-xs tracking-[0.18em] text-accent uppercase">Reader workflow</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold text-ink">Optional page translation</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Keep pages on-device for OCR, or choose online translation services in the reader settings.
+            </p>
+            <ol className="mt-7 space-y-3">
+              {[
+                { Icon: ScanText, title: 'Detect and read text' },
+                { Icon: Languages, title: 'Translate when enabled' },
+                { Icon: Sparkles, title: 'Show text overlays' },
+              ].map(({ Icon, title }, index) => (
+                <li key={title} className="flex items-center gap-3 rounded-lg border border-line bg-bg/50 p-3">
+                  <span className="flex size-9 items-center justify-center rounded-md bg-accent/10 text-accent">
+                    <Icon aria-hidden="true" className="size-5" />
+                  </span>
+                  <span className="font-mono text-xs text-muted">0{index + 1}</span>
+                  <span className="text-sm font-medium text-ink">{title}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </motion.div>
       </Container>
     </section>

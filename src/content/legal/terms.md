@@ -1,130 +1,100 @@
 # Terms of Use
 
-**Last updated: 2026-10-10**
+**Last updated: October 18, 2026**
 
-## 1. About Mangora
+These Terms of Use ("Terms") apply to the Mangora Android application, the Mangora website, and project materials made available through official Mangora channels (together, "Mangora"). By downloading, installing, accessing, or using Mangora, you agree to these Terms. If you do not agree, do not use Mangora.
 
-Mangora is free, open-source software distributed as a signed Android APK. Mangora is provided on an **“as is” and “as available”** basis, without warranties of any kind, to the fullest extent permitted by applicable law.
+These Terms describe the relationship between you and the Mangora project. They do not replace the terms of an extension repository, extension, content service, translation service, hosting platform, or other third party.
 
-By installing or using Mangora, you acknowledge that you do so at your own risk and that you are responsible for determining whether the software is appropriate for your device, location, and intended use.
+## 1. What Mangora is
 
-## 2. Third-Party Content and Providers
+Mangora is a reader and translation tool. The Android application includes an extension host that can discover and install software from a repository URL you choose. Installed extensions can provide catalogs, search results, metadata, and access to material hosted or served by other parties.
 
-Mangora is a **reader application**. It does not host, publish, store, or claim ownership of the third-party content that may be accessible through the application.
+Mangora does not operate or endorse a universal content catalog, and the project does not claim ownership of material made available by an extension or external service. The website does not provide chapter or gallery content.
 
-When you use Mangora to access content, the application may communicate directly with third-party websites, services, or content providers selected or configured by you. The availability, accuracy, legality, and content of those services are controlled by the respective third parties and not by Mangora.
+The app also includes optional text-recognition and translation features. Some processing can be local; other modes make requests to external services as described in the Privacy Policy.
 
-Mangora is not affiliated with, sponsored by, endorsed by, or acting on behalf of any third-party provider unless expressly stated otherwise.
+## 2. Third-party software, repositories, content, and services
 
-You are solely responsible for your use of third-party services and for complying with all applicable laws, regulations, licenses, and terms of service that apply to you.
+Extension repositories, installed extensions, source websites, content hosts, translation services, GitHub, and website hosting are independently operated. The cloud OCR endpoint configured in the app is hosted on Hugging Face Spaces; the endpoint operator and hosting platform control their respective systems and policies. These operators control their software, material, terms, privacy practices, security, availability, and responses to complaints.
 
-If you believe that content available through a third-party provider infringes your copyright or other legal rights, you should contact the relevant provider or rights holder directly. Mangora does not control third-party content and generally cannot remove content hosted by those providers.
+Mangora does not select or control repositories that you add, does not verify that an extension or a particular item is authorized or lawful, and does not guarantee that third-party material is accurate, safe, licensed, suitable, or available. An extension appearing in your app, or a request being made through it, is not a Mangora endorsement, partnership, or grant of rights.
 
-## 3. Acceptable Use
+You choose whether to add repositories, install extensions, browse material, download files, or enable online OCR or translation. You are responsible for evaluating those choices, for reviewing the applicable third-party terms and privacy notices, and for ensuring your use is lawful where you are. You must not use Mangora to infringe copyright or other rights, bypass access controls, or violate a third party's terms.
 
-You agree not to use Mangora:
+Mangora is not the operator of third-party content services and cannot remove, correct, license, or guarantee the availability of material hosted by them. A rights holder should contact the party that controls the relevant material or hosting service. The project may consider reports that specifically concern material the project itself controls, as explained in the Copyright and DMCA Policy.
 
-- For any unlawful purpose or in violation of applicable laws or regulations.
-- To knowingly infringe or facilitate the infringement of copyright, trademarks, or other intellectual-property rights.
-- To circumvent security measures, access controls, or technical restrictions of third-party services.
-- To interfere with, disrupt, overload, or attack Mangora or any third-party service accessed through it.
-- To distribute malware or other harmful software through or in connection with Mangora.
-- To misrepresent a modified or unofficial version of Mangora as the official software.
-- In any manner that could reasonably be expected to damage the project, its contributors, or third-party services.
-
-You are responsible for ensuring that your use of Mangora and any content accessed through it complies with applicable law.
-
-## 4. Open-Source Software and Modifications
-
-Mangora is open-source software. Your rights to use, modify, and redistribute the source code are governed by the applicable open-source license for the relevant portion of the project.
-
-Nothing in these Terms grants you permission to use the Mangora name, branding, logos, signing keys, release infrastructure, or other project identifiers in a way that falsely suggests that a modified or unofficial version is an official release or is endorsed by the project.
-
-## 5. Downloads and Local Storage
-
-Mangora may provide features that allow you to download or save content to storage locations that you select.
-
-You are responsible for ensuring that any content you download, store, reproduce, or share is permitted under applicable law and the terms governing the relevant content or provider.
-
-Mangora does not grant you ownership or additional rights to third-party content merely because the application allows you to access or save it.
-
-## 6. Third-Party Services
-
-Mangora may interact with third-party services, including content providers and optional services configured or used by you.
-
-Those services are independent of Mangora and may have their own terms, privacy policies, availability restrictions, and technical requirements. Mangora does not guarantee the availability, reliability, security, accuracy, or legality of any third-party service.
-
-Your use of a third-party service may also be subject to that provider's own terms and policies.
-
-## 7. Availability and Changes
-
-Mangora and third-party services may change, become unavailable, or stop functioning at any time.
-
-The authors and contributors do not guarantee that:
-
-- Mangora will always be available or functional.
-- Any particular provider will remain accessible.
-- Any particular content will remain available.
-- Mangora will be compatible with every device, operating-system version, or third-party service.
-- Bugs, errors, or security issues will always be identified or corrected.
-
-Features, providers, integrations, and other aspects of the project may be added, modified, or removed without notice.
-
-## 8. No Warranty
-
-To the fullest extent permitted by applicable law, Mangora is provided **without warranties of any kind**, whether express, implied, statutory, or otherwise.
-
-To the extent permitted by law, the authors and contributors disclaim warranties including, but not limited to, warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, availability, and freedom from errors or interruptions.
-
-Nothing in these Terms is intended to exclude a warranty or consumer right that cannot legally be excluded under applicable law.
-
-## 9. Limitation of Liability
-
-To the fullest extent permitted by applicable law, the authors and contributors of Mangora will not be liable for any direct, indirect, incidental, special, consequential, exemplary, or other damages arising out of or relating to:
-
-- Your use of or inability to use Mangora;
-- Your use of, or reliance on, third-party services or content;
-- Loss or corruption of locally stored data;
-- Downloads or files created or accessed through the application;
-- Device damage, compatibility issues, or software conflicts; or
-- Any unauthorized access, interruption, modification, or failure involving third-party services.
-
-Where liability cannot legally be excluded, it will be limited to the maximum extent permitted by applicable law.
-
-## 10. Your Responsibility
+## 3. User responsibility and age suitability
 
 You are responsible for:
 
-- Maintaining appropriate backups of your own data.
-- Protecting your device and any credentials or API keys you choose to use with Mangora.
-- Verifying the legality of content and services in your jurisdiction.
-- Complying with applicable laws and third-party terms.
-- Using the application responsibly and at your own discretion.
+- Your device, network connection, repository URLs, installed extensions, and any credentials or API keys you provide.
+- Determining whether content and features are appropriate for you and permitted in your location.
+- Obtaining any permissions or rights required to access, download, translate, store, reproduce, or share material.
+- Securing your device and keeping your own backups of data you want to retain.
+- Reviewing third-party terms, privacy policies, usage limits, and possible charges before using a third-party service.
 
-## 11. Intellectual Property
+Mangora is not designed specifically for children. Extensions may expose mature or otherwise age-restricted material. App filters are convenience controls and do not guarantee that all unsuitable material will be hidden or that a user is of an appropriate age.
 
-Mangora's source code and other project materials are provided under their applicable licenses.
+## 4. Downloads and local files
 
-Third-party names, trademarks, logos, websites, and content remain the property of their respective owners. Nothing in these Terms transfers ownership of third-party intellectual property to Mangora or its users.
+Mangora can save chapters as `.cbz` archives in a folder selected by you through Android's file picker. A save or download feature does not transfer ownership of material or grant a license to reproduce or distribute it.
 
-## 12. Changes to These Terms
+You are responsible for the material you choose to save and for its subsequent use. Third-party content may be removed or become unavailable, and local files may remain on your device or selected storage after an extension or online service stops working. Backups and exported files may contain library data, settings, API keys, reading history, and cached translation text; protect them accordingly.
 
-These Terms may be updated from time to time as Mangora develops or its features and integrations change.
+## 5. Online features and API credentials
 
-When the Terms are updated, the **“Last updated”** date will be changed accordingly. Your continued use of Mangora after updated Terms become available constitutes acceptance of the revised Terms, to the extent permitted by applicable law.
+When you use an online feature, your device communicates with the relevant third-party endpoint. For example, free translation sends recognized text to Google's translation endpoint; AI translation sends text and optional prior-page text context to the Gemini API using the key you enter; and cloud OCR sends image crops to the cloud OCR endpoint configured in the app. Extension browsing and downloads communicate with the endpoints selected by the extension.
 
-If you do not agree with the updated Terms, you should stop using Mangora.
+These services have their own conditions, limits, privacy practices, and charges. You are responsible for any API key you provide and any fees or usage arising from it. Do not provide a key you are not authorized to use. Mangora does not promise that a service will be free, uninterrupted, or available in your region.
 
-## 13. Severability
+## 6. Project code, branding, and licenses
 
-If any provision of these Terms is found to be invalid, unlawful, or unenforceable, that provision will be enforced to the maximum extent permitted by law, and the remaining provisions will remain in effect.
+Copyright and other rights in Mangora code and project materials are governed by the applicable license and notices distributed with those materials. Third-party libraries, models, fonts, logos, artwork, and other assets may have separate owners and license terms. Consult the applicable notices; do not assume that one license covers every file or that it grants rights to any reading material.
+
+The Mangora name, logo, signing identity, and release channels may not be used to suggest that a modified or unofficial build is an official Mangora release or is endorsed by the project. You may not misrepresent a modified application, extension, or repository as being maintained or verified by Mangora.
+
+## 7. Changes, suspension, and availability
+
+Features, app releases, documentation, website content, and project channels may change or be discontinued. A repository, extension, content service, or external API may stop working without notice. Mangora does not promise to keep any particular feature, integration, or third-party connection available.
+
+The project may restrict access to official project services or communications where reasonably necessary to protect users, maintain the project, comply with law, or address abuse. This does not give Mangora control over independently operated services.
+
+## 8. No warranty
+
+To the fullest extent permitted by applicable law, Mangora is provided "as is" and "as available," without warranties or conditions of any kind, whether express, implied, statutory, or otherwise. The project does not warrant that Mangora will be accurate, secure, uninterrupted, compatible with your device, free of defects, or suitable for your purposes, or that any third-party content or service is lawful, authorized, safe, or available.
+
+Nothing in these Terms excludes a warranty or consumer right that applicable law does not allow to be excluded.
+
+## 9. Limitation of liability
+
+To the fullest extent permitted by applicable law, the Mangora project and its contributors will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, goodwill, device availability, or business opportunity, arising from or related to Mangora or your use of a third-party repository, extension, service, or material.
+
+To the fullest extent permitted by applicable law, Mangora disclaims liability for loss or damage caused by independent repository, extension, content, translation, hosting, or platform operators, including their content, software, acts, omissions, data handling, security, availability, and terms. The operator of the configured OCR endpoint and its hosting platform control their respective systems and practices. This allocation does not decide whether Mangora has any responsibility under a particular law or set of facts.
+
+Where liability cannot be excluded, it is limited to the maximum extent the law permits. Nothing in this section limits liability for fraud, intentional misconduct, or any other liability that cannot lawfully be limited.
+
+## 10. Copyright reports
+
+Mangora does not host third-party chapters or galleries. A report about material delivered by an independent extension or service should be sent to the operator or hosting platform that controls it. A report about a file or page controlled by the Mangora project can be submitted as described in the Copyright and DMCA Policy. This policy is informational and does not make Mangora a designated DMCA agent for an independent service.
+
+## 11. Privacy
+
+Use of Mangora is also subject to the [Privacy Policy](/privacy), which describes local storage and the information that may be sent to third parties. By using an optional online feature, you understand that the relevant data may be processed by the endpoint required for that feature, subject to that operator's policies.
+
+## 12. Changes to these Terms
+
+The Terms may be revised when the software, website, or applicable practices change. The "Last updated" date indicates the latest revision. Updated Terms will be posted on the Mangora website. Continued use after the updated Terms are posted constitutes acceptance only to the extent permitted by applicable law. If you do not agree, stop using Mangora.
+
+## 13. Severability and interpretation
+
+If any provision is held invalid or unenforceable, it will be enforced to the maximum lawful extent and the remaining provisions will remain in effect. Headings are for convenience and do not change the meaning of these Terms.
 
 ## 14. Contact
 
-For questions regarding these Terms, the Mangora project, or its open-source software, please use the official project communication channels provided by the project, including its repository and community channels.
+For questions about the application or these Terms, use the official Mangora project channels linked from the [Mangora website](/). Do not post API keys, private credentials, or sensitive personal information in a public issue or community channel.
 
 ---
 
-**Mangora**  
-Free and open-source manga/manhwa reader  
-**Last updated: 2026-10-10**
+**Mangora — reader and translation software**  
+**Last updated: October 18, 2026**

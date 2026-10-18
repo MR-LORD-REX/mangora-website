@@ -7,11 +7,11 @@ export interface FaqItem {
 export const FAQ_ITEMS: FaqItem[] = [
   {
     q: 'Is Mangora free?',
-    a: 'Yes. Mangora is free and open source, with no account, no subscription and no ads. Download the signed APK from GitHub Releases or Telegram.',
+    a: 'Yes. Mangora is free to download, with no account or subscription. Download the signed APK from GitHub Releases or Telegram.',
   },
   {
-    q: 'Which manga and manhwa sources does Mangora support?',
-    a: 'Eight sources are built in, including MangaDex, MangaKatana, MangaGeko, Comix, BrainRot and Philia Scans. Mangora also supports additional sources beyond the ones shown here - the full provider list is documented in the project README.',
+    q: 'How do I access reading content?',
+    a: 'Mangora does not bundle a content catalogue. You choose and add a compatible third-party extension repository, then install extensions through the app. Extension authors and content services are independent of Mangora.',
   },
   {
     q: 'Does Mangora work offline?',
@@ -23,7 +23,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Is my reading private?',
-    a: 'Mangora has no account, no telemetry and no analytics. Cloud OCR and AI translation run only when you turn them on, using your own Gemini API key. Downloads are written to a folder you pick. The app itself stores everything locally in SQLite.',
+    a: 'Mangora has no account or in-app analytics. Reading requests go to the third-party endpoints used by your installed extension. Free translation sends recognized text to Google; AI translation sends text to Gemini; cloud OCR sends image crops to its configured service. These options and their disclosures are described in the Privacy Policy.',
   },
   {
     q: 'Which devices does Mangora support?',
@@ -34,7 +34,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     a: 'Download the latest mangora-arm64-v8a APK, then allow installs from unknown sources for your browser or file manager when Android prompts. Updates install over older versions without uninstalling.',
   },
   {
-    q: 'Is Mangora affiliated with the providers?',
-    a: 'No. Mangora is an independent reader. It hosts no content and is not affiliated with any of the providers it supports; it fetches pages live from each provider when you read.',
+    q: 'Is Mangora responsible for third-party extensions or content?',
+    a: 'Mangora is an independent reader and translation tool, not the operator of third-party extension repositories or content services. Those parties control their own software, content and policies. Legal responsibility depends on applicable law and facts; see the Terms and Copyright Policy.',
   },
 ]

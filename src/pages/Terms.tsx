@@ -8,7 +8,7 @@ export default function Terms() {
     <>
       <Seo
         title="Terms of Use - Mangora"
-        description="The terms for using Mangora: free and open-source software, a reader that hosts no content, and your responsibility for the providers you choose to reach."
+        description="Terms for Mangora, an Android reader and translator. Learn how third-party extensions and services are handled, your responsibilities, and the limits of the software."
         path="/terms"
       />
       <Section className="pt-14">

@@ -46,7 +46,7 @@ export default function Download() {
           Get Mangora on Android
         </h1>
         <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-          Free, open source and signed. The APK is published on GitHub Releases and mirrored on Telegram.
+          Free to download and signed. The APK is published on GitHub Releases and mirrored on Telegram.
         </p>
 
         <div className="mt-8">

@@ -20,5 +20,4 @@ export const LINKS = {
 export const SITE_LINKS = {
   githubReleases: 'https://github.com/MR-LORD-REX/mangora/releases',
   githubLatest: 'https://github.com/MR-LORD-REX/mangora/releases/latest',
-  githubReadmeSources: 'https://github.com/MR-LORD-REX/mangora#sources',
 } as const

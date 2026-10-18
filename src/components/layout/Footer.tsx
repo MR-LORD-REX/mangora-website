@@ -82,8 +82,7 @@ export function Footer() {
             <h2 className="mb-4 font-mono text-xs font-medium tracking-[0.18em] text-muted uppercase">About</h2>
             <Logo className="mb-3" />
             <p className="text-sm leading-relaxed text-muted">
-              A free, open-source Android manga and manhwa reader with offline downloads and built-in AI
-              translation.
+              An Android reader and translator with offline downloads and optional online translation.
             </p>
             <p className="mt-3 font-mono text-xs text-muted">
               Version <span className="text-ink">{latestVersion}</span>
@@ -98,8 +97,8 @@ export function Footer() {
             &copy; {year} {SITE.name}. All rights reserved.
           </p>
           <p className="max-w-2xl text-balance sm:text-right">
-            {SITE.name} is a reader. It hosts no content and is not affiliated with any of the providers it
-            supports.
+            {SITE.name} does not operate a content catalogue. Extensions and services are independent; their
+            content, availability and practices are outside Mangora's control.
           </p>
         </Container>
       </div>

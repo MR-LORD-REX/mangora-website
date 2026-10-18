@@ -8,7 +8,7 @@ export default function Privacy() {
     <>
       <Seo
         title="Privacy Policy - Mangora"
-        description="Mangora is private by default: no account, no telemetry, no analytics. See exactly what the app stores locally and when data can leave your device."
+        description="See what Mangora stores on your device and what data may be sent to extension services, Google translation services, Gemini, OCR endpoints, GitHub and website hosting."
         path="/privacy"
       />
       <Section className="pt-14">

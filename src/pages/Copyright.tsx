@@ -8,7 +8,7 @@ export default function Copyright() {
     <>
       <Seo
         title="Copyright and DMCA - Mangora"
-        description="Mangora hosts no content. Where to send a takedown request, what belongs to the project, and how provider names and logos are used."
+        description="Mangora is a reader and translator, not a content host. Learn how to contact the operator of third-party content and how to report material controlled by the project."
         path="/copyright"
       />
       <Section className="pt-14">

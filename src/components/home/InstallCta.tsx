@@ -18,7 +18,7 @@ export function InstallCta() {
             Install Mangora in a minute
           </h2>
           <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted">
-            Free and open source. No account, no ads, no tracking - just the reader.
+            Free to download, with no account. Choose whether to use extensions and online translation services.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button to="/download" size="lg" icon={<Download aria-hidden="true" className="size-5" />}>

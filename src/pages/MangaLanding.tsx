@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react'
 import { useLocation, useSearchParams, useParams } from 'react-router-dom'
 import { Download, ExternalLink } from 'lucide-react'
 import { Seo } from '../components/ui/Seo'
 import { Section } from '../components/ui/Section'
 import { Button } from '../components/ui/Button'
-import { Badge } from '../components/ui/Badge'
 import { SITE } from '../lib/site'
 
 /**
@@ -19,12 +17,6 @@ export default function MangaLanding() {
   const [params] = useSearchParams()
   const provider = params.get('provider') ?? ''
   const title = params.get('title') ?? ''
-  const [origin, setOrigin] = useState('')
-
-  useEffect(() => {
-    setOrigin(window.location.origin)
-  }, [])
-
   const intentUrl = `intent://${kind}/${encodeURIComponent(id)}?provider=${encodeURIComponent(
     provider,
   )}#Intent;scheme=mangora;package=${SITE.packageId};end`
@@ -33,7 +25,7 @@ export default function MangaLanding() {
     <>
       <Seo
         title={title ? `Read ${title} in Mangora` : 'Open in Mangora'}
-        description="Mangora is a free Android manga and manhwa reader with offline downloads and AI translation. Install it to open this series, or download the app."
+        description="Mangora is a free Android reader and translator. Open this link in the app to check whether the extension you use can retrieve its details."
         path={`/${kind}/${encodeURIComponent(id)}`}
       />
       <Section className="py-20">
@@ -42,14 +34,9 @@ export default function MangaLanding() {
           <h1 className="mt-4 font-display text-2xl font-semibold text-ink sm:text-3xl">
             {title || 'This series'}
           </h1>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-            {provider ? <Badge tone="accent">{provider}</Badge> : null}
-            {id ? <Badge className="font-mono">{id}</Badge> : null}
-          </div>
-
           <p className="mt-6 leading-relaxed text-muted">
-            If Mangora is installed, open the link again from your Android device. If it is not, install it
-            first — the series will load straight from {provider || 'the source'}.
+            This link can be opened in Mangora on Android. Mangora does not host the series; if available, its
+            details are fetched by the third-party extension configured in the app.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -60,12 +47,6 @@ export default function MangaLanding() {
               Open in app
             </Button>
           </div>
-
-          {origin ? (
-            <p className="mt-6 font-mono text-xs break-all text-muted/70">
-              On-device link: mangora://{kind}/{id}
-            </p>
-          ) : null}
         </div>
       </Section>
     </>

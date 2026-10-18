@@ -32,7 +32,7 @@ const FEATURES = [
   {
     Icon: ShieldCheck,
     title: 'Private by default',
-    body: 'No account, no telemetry, no analytics. Everything is stored locally in SQLite and exports to a single .db file you own.',
+    body: 'No account or in-app analytics. Core library data stays on-device; extension and optional translation requests go to the services you use.',
   },
 ]
 
