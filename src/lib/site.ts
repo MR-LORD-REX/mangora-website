@@ -7,10 +7,10 @@ export const SITE = {
   url: 'https://mangora-web.web.app',
   title: 'Mangora - Manga & Manhwa Reader with AI Translation',
   description:
-    'Mangora is an Android reader and translator with four reader modes, offline .cbz downloads, on-device OCR and optional online translation.',
+    'Mangora is a serverless Android reader and translator with four reader modes, offline .cbz downloads, on-device OCR and optional online translation.',
   tagline: 'Read your way with four reader modes, offline downloads and optional page translation.',
   /** Fallback when no release is loaded yet; the live value comes from the latest GitHub release. */
-  version: '0.0.1',
+  version: '0.0.4',
   packageId: 'com.mangora.app',
   locale: 'en',
   twitter: '@mangora',

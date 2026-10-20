@@ -19,11 +19,15 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'How does the AI page translation work?',
-    a: 'Mangora draws a bilingual overlay on any page: YOLO detects the text boxes, OCR reads the text (on-device via ExecuTorch, or a cloud endpoint), and Gemini translates it into your language. No pre-translated releases required.',
+    a: 'Mangora draws a bilingual overlay on any page: YOLO detects the text boxes, a downloadable on-device OCR model reads the text, and Gemini translates it into your language. Auto pages waits for the whole page OCR pass. Auto bubbles sends 1-5 OCR-ready bubbles per request so the first translations appear sooner, while prior pages are attached as context. You can also queue whole downloaded chapters under Settings > Translation queue, which writes results to the translation cache so pages open instantly.',
   },
   {
     q: 'Is my reading private?',
-    a: 'Mangora has no account or in-app analytics. Reading requests go to the third-party endpoints used by your installed extension. Free translation sends recognized text to Google; AI translation sends text to Gemini; cloud OCR sends image crops to its configured service. These options and their disclosures are described in the Privacy Policy.',
+    a: 'Mangora operates no application server or backend and has no account or in-app analytics. Library data stays on-device. Reading requests go directly to the third-party endpoints used by your installed extension. OCR runs on-device; free translation sends recognized text directly to Google and AI translation sends it directly to Gemini. The Privacy Policy describes these flows.',
+  },
+  {
+    q: 'Does Mangora have a server or account?',
+    a: 'No. Mangora has no account system or application backend. Library, history, settings, OCR models, translation cache and API usage counters stay on-device. Only optional features contact third parties, and those requests go directly from your device.',
   },
   {
     q: 'Which devices does Mangora support?',

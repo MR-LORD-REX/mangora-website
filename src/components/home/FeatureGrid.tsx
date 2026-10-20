@@ -22,17 +22,17 @@ const FEATURES = [
   {
     Icon: ScanText,
     title: 'OCR text detection',
-    body: 'YOLO finds the speech bubbles on any page. Run OCR on-device through ExecuTorch, or point it at a cloud endpoint you control.',
+    body: 'YOLO finds the speech bubbles on any page. Download a Baberu or PP-OCRv5 model and run recognition entirely on-device.',
   },
   {
     Icon: Languages,
     title: 'AI page translation',
-    body: 'Translate a page with Gemini, batched with previous pages as story context, then drawn back over the art as an adjustable overlay.',
+    body: 'Auto pages translates a whole page; Auto bubbles sends small OCR-ready batches for faster overlays. Both use prior pages as story context, then draw the result over the art.',
   },
   {
     Icon: ShieldCheck,
     title: 'Private by default',
-    body: 'No account or in-app analytics. Core library data stays on-device; extension and optional translation requests go to the services you use.',
+    body: 'No account, in-app analytics or Mangora backend. Library data stays on-device; extensions and optional translation contact the services you choose directly.',
   },
 ]
 

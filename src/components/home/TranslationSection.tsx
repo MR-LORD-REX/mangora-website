@@ -4,8 +4,8 @@ import { Reveal } from '../ui/Reveal'
 
 const STEPS = [
   { Icon: Sparkles, title: 'Detect', body: 'A YOLO model finds the speech bubbles and text regions on the page.' },
-  { Icon: ScanText, title: 'Read', body: 'OCR runs on-device by default, or through the optional cloud OCR service.' },
-  { Icon: WandSparkles, title: 'Translate', body: 'Choose free online translation or Gemini AI translation.' },
+  { Icon: ScanText, title: 'Read', body: 'Download the OCR model for your language and read text entirely on-device.' },
+  { Icon: WandSparkles, title: 'Translate', body: 'Use free or Gemini translation in Auto pages or Auto bubbles, or pre-translate whole downloaded chapters.' },
 ]
 
 export function TranslationSection() {
@@ -18,8 +18,11 @@ export function TranslationSection() {
             Read a series the day it comes out
           </h2>
           <p className="mt-4 leading-relaxed text-muted">
-            You do not need a pre-translated release. Mangora detects the text on the page, reads it, translates
+            You do not need a pre-translated release. Mangora detects the text on the page, reads it on-device, translates
             it and draws it back over the artwork - with adjustable text scale so the overlay fits the bubbles.
+            Auto pages waits for the full page; AI Auto bubbles sends 1-5 OCR-ready bubbles at a time for faster first
+            translations while keeping prior pages as context. You can also queue downloaded chapters for batch
+            pre-translation under Settings, so pages open instantly.
           </p>
           <ol className="mt-8 grid gap-4 sm:grid-cols-3">
             {STEPS.map(({ Icon, title, body }, i) => (

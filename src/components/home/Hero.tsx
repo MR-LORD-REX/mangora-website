@@ -66,7 +66,7 @@ export function Hero() {
             <p className="font-mono text-xs tracking-[0.18em] text-accent uppercase">Reader workflow</p>
             <h2 className="mt-3 font-display text-2xl font-semibold text-ink">Optional page translation</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Keep pages on-device for OCR, or choose online translation services in the reader settings.
+              Page detection and OCR stay on-device. Translation is optional and contacts the service you choose directly.
             </p>
             <ol className="mt-7 space-y-3">
               {[

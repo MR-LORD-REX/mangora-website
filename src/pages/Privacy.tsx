@@ -8,7 +8,7 @@ export default function Privacy() {
     <>
       <Seo
         title="Privacy Policy - Mangora"
-        description="See what Mangora stores on your device and what data may be sent to extension services, Google translation services, Gemini, OCR endpoints, GitHub and website hosting."
+        description="See what Mangora stores on-device and what optional requests go directly to extension services, Google translation, Gemini, Hugging Face, GitHub and website hosting."
         path="/privacy"
       />
       <Section className="pt-14">

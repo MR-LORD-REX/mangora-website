@@ -61,16 +61,22 @@ const SECTIONS: GuideSection[] = [
   {
     id: 'translation',
     heading: 'OCR and AI translation',
-    what: 'Mangora detects the text on a page, reads it, translates it and draws the result back over the artwork as an overlay.',
+    what: 'Mangora detects the text on a page, reads it on-device, translates it and draws the result back over the artwork as an overlay.',
     how: (
       <>
-        Translation is off by default. Free translation sends recognized text to Google's translation service.
-        AI translation sends recognized text to Gemini using the API key you provide. Cloud OCR sends page
-        crops to the service configured in the app; on-device OCR processes crops locally.
+        Translation is off by default. Download the OCR model for your reading language under Settings &gt;
+        OCR models; Baberu covers Japanese, Chinese and English, and PP-OCRv5 Korean covers Korean and Latin
+        scripts. Recognition runs on-device. Choose the Free engine to send recognized text to Google, or the AI
+        engine to send it to Gemini using the API key you provide. Modes are Single page, Auto pages (waits for
+        the full page OCR pass) and Auto bubbles (AI-only; sends 1-5 OCR-ready bubbles per request with prior
+        pages as context). Use Bubbles per batch and Max context in the Translation tab, watch the API usage
+        dropdown and Pipeline metrics table, and queue downloaded chapters under Settings &gt; Translation queue
+        for background pre-translation.
       </>
     ),
     gotchas: [
-      'Online translation and cloud OCR involve external services and transmit text or image crops. Review the Privacy Policy before enabling them.',
+      'Online translation involves external services and transmits recognized text. Review the Privacy Policy before enabling it.',
+      'Auto bubbles is AI-only. A smaller batch shows text sooner but uses more Gemini requests; a larger batch reduces request volume.',
       'Translation quality depends on the model and the key you supply; adjust the overlay text scale to fit the bubbles.',
     ],
   },

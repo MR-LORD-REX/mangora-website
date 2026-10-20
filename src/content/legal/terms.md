@@ -1,6 +1,6 @@
 # Terms of Use
 
-**Last updated: October 18, 2026**
+**Last updated: October 20, 2026**
 
 These Terms of Use ("Terms") apply to the Mangora Android application, the Mangora website, and project materials made available through official Mangora channels (together, "Mangora"). By downloading, installing, accessing, or using Mangora, you agree to these Terms. If you do not agree, do not use Mangora.
 
@@ -12,15 +12,15 @@ Mangora is a reader and translation tool. The Android application includes an ex
 
 Mangora does not operate or endorse a universal content catalog, and the project does not claim ownership of material made available by an extension or external service. The website does not provide chapter or gallery content.
 
-The app also includes optional text-recognition and translation features. Some processing can be local; other modes make requests to external services as described in the Privacy Policy.
+The app also includes optional text-recognition and translation features. Text detection and OCR run on-device. Optional free or AI translation sends recognized text directly from your device to the selected third-party service as described in the Privacy Policy. Mangora does not operate an application server or backend for these features.
 
 ## 2. Third-party software, repositories, content, and services
 
-Extension repositories, installed extensions, source websites, content hosts, translation services, GitHub, and website hosting are independently operated. The cloud OCR endpoint configured in the app is hosted on Hugging Face Spaces; the endpoint operator and hosting platform control their respective systems and policies. These operators control their software, material, terms, privacy practices, security, availability, and responses to complaints.
+Extension repositories, installed extensions, source websites, content hosts, translation services, model distribution hosts, GitHub, and website hosting are independently operated. These operators control their software, material, terms, privacy practices, security, availability, and responses to complaints.
 
 Mangora does not select or control repositories that you add, does not verify that an extension or a particular item is authorized or lawful, and does not guarantee that third-party material is accurate, safe, licensed, suitable, or available. An extension appearing in your app, or a request being made through it, is not a Mangora endorsement, partnership, or grant of rights.
 
-You choose whether to add repositories, install extensions, browse material, download files, or enable online OCR or translation. You are responsible for evaluating those choices, for reviewing the applicable third-party terms and privacy notices, and for ensuring your use is lawful where you are. You must not use Mangora to infringe copyright or other rights, bypass access controls, or violate a third party's terms.
+You choose whether to add repositories, install extensions, browse material, download files, download an OCR model, or enable online translation. You are responsible for evaluating those choices, for reviewing the applicable third-party terms and privacy notices, and for ensuring your use is lawful where you are. You must not use Mangora to infringe copyright or other rights, bypass access controls, or violate a third party's terms.
 
 Mangora is not the operator of third-party content services and cannot remove, correct, license, or guarantee the availability of material hosted by them. A rights holder should contact the party that controls the relevant material or hosting service. The project may consider reports that specifically concern material the project itself controls, as explained in the Copyright and DMCA Policy.
 
@@ -44,7 +44,7 @@ You are responsible for the material you choose to save and for its subsequent u
 
 ## 5. Online features and API credentials
 
-When you use an online feature, your device communicates with the relevant third-party endpoint. For example, free translation sends recognized text to Google's translation endpoint; AI translation sends text and optional prior-page text context to the Gemini API using the key you enter; and cloud OCR sends image crops to the cloud OCR endpoint configured in the app. Extension browsing and downloads communicate with the endpoints selected by the extension.
+When you use an online feature, your device communicates directly with the relevant third-party endpoint; no Mangora server is involved. For example, free translation sends recognized text to Google's translation endpoint, AI translation sends text and optional prior-page text context to the Gemini API using the key you enter, and an OCR model download contacts its Hugging Face distribution host. Extension browsing and downloads communicate with the endpoints selected by the extension.
 
 These services have their own conditions, limits, privacy practices, and charges. You are responsible for any API key you provide and any fees or usage arising from it. Do not provide a key you are not authorized to use. Mangora does not promise that a service will be free, uninterrupted, or available in your region.
 
@@ -70,7 +70,7 @@ Nothing in these Terms excludes a warranty or consumer right that applicable law
 
 To the fullest extent permitted by applicable law, the Mangora project and its contributors will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, goodwill, device availability, or business opportunity, arising from or related to Mangora or your use of a third-party repository, extension, service, or material.
 
-To the fullest extent permitted by applicable law, Mangora disclaims liability for loss or damage caused by independent repository, extension, content, translation, hosting, or platform operators, including their content, software, acts, omissions, data handling, security, availability, and terms. The operator of the configured OCR endpoint and its hosting platform control their respective systems and practices. This allocation does not decide whether Mangora has any responsibility under a particular law or set of facts.
+To the fullest extent permitted by applicable law, Mangora disclaims liability for loss or damage caused by independent repository, extension, content, translation, OCR-model distribution, extension/content hosting, or platform operators, including their content, software, acts, omissions, data handling, security, availability, and terms. Each such operator controls its respective systems and practices. This allocation does not decide whether Mangora has any responsibility under a particular law or set of facts.
 
 Where liability cannot be excluded, it is limited to the maximum extent the law permits. Nothing in this section limits liability for fraud, intentional misconduct, or any other liability that cannot lawfully be limited.
 
@@ -96,5 +96,5 @@ For questions about the application or these Terms, use the official Mangora pro
 
 ---
 
-**Mangora — reader and translation software**  
-**Last updated: October 18, 2026**
+**Mangora - reader and translation software**  
+**Last updated: October 20, 2026**
