@@ -10,7 +10,7 @@ export const SITE = {
     'Mangora is a serverless Android reader and translator with four reader modes, offline .cbz downloads, on-device OCR and optional online translation.',
   tagline: 'Read your way with four reader modes, offline downloads and optional page translation.',
   /** Fallback when no release is loaded yet; the live value comes from the latest GitHub release. */
-  version: '0.0.4',
+  version: '0.0.6',
   packageId: 'com.mangora.app',
   locale: 'en',
   twitter: '@mangora',

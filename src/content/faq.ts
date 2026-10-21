@@ -15,11 +15,15 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Does Mangora work offline?',
-    a: 'Yes. Download chapters as .cbz files to a folder you choose, queue them over Wi-Fi only, and keep reading with no connection - ideal for flights or commuting.',
+    a: 'Yes. Download chapters as .cbz files to a folder you choose, queue them over Wi-Fi only, and read those saved chapters without a connection. Settings > Downloads can recover the chapter list from the downloads/metadata/metadata.json file in that folder.',
+  },
+  {
+    q: 'How does the reader image cache work?',
+    a: 'Mangora keeps images for up to two recently opened chapters in a temporary reader cache and shares them between viewing and translation. Downloaded chapters remain in your selected folder. By default, the temporary reader cache is cleared on a cold app start; change this in Settings > Data & Storage.',
   },
   {
     q: 'How does the AI page translation work?',
-    a: 'Mangora draws a bilingual overlay on any page: YOLO detects the text boxes, a downloadable on-device OCR model reads the text, and Gemini translates it into your language. Auto pages waits for the whole page OCR pass. Auto bubbles sends 1-5 OCR-ready bubbles per request so the first translations appear sooner, while prior pages are attached as context. You can also queue whole downloaded chapters under Settings > Translation queue, which writes results to the translation cache so pages open instantly.',
+    a: 'Mangora draws a translated overlay on the page: local detection finds text regions, downloadable PP-OCR models read the text on-device, and the selected translation engine translates it. PP-OCRv6 covers Japanese, Chinese and English; PP-OCRv5 covers Korean and Latin-script languages. Gemini Auto bubbles can send 1-5 recognized bubbles per request and use earlier page text as context. You can also queue downloaded chapters for background pre-translation.',
   },
   {
     q: 'Is my reading private?',

@@ -56,6 +56,7 @@ const SECTIONS: GuideSection[] = [
     gotchas: [
       'Turn on Wi-Fi-only to pause the queue on mobile data; it resumes on its own when Wi-Fi returns.',
       'Live browse and search feeds are not cached — only downloaded chapters read offline.',
+      'If the app loses its download list, use Settings > Downloads > Recover downloads. Recovery checks the archives listed in downloads/metadata/metadata.json; keep that file with the folder.',
     ],
   },
   {
@@ -65,18 +66,19 @@ const SECTIONS: GuideSection[] = [
     how: (
       <>
         Translation is off by default. Download the OCR model for your reading language under Settings &gt;
-        OCR models; Baberu covers Japanese, Chinese and English, and PP-OCRv5 Korean covers Korean and Latin
-        scripts. Recognition runs on-device. Choose the Free engine to send recognized text to Google, or the AI
-        engine to send it to Gemini using the API key you provide. Modes are Single page, Auto pages (waits for
-        the full page OCR pass) and Auto bubbles (AI-only; sends 1-5 OCR-ready bubbles per request with prior
-        pages as context). Use Bubbles per batch and Max context in the Translation tab, watch the API usage
-        dropdown and Pipeline metrics table, and queue downloaded chapters under Settings &gt; Translation queue
-        for background pre-translation.
+        OCR models; PP-OCRv6 covers Japanese, Chinese and English, while PP-OCRv5 covers Korean and
+        Latin-script languages. Recognition runs on-device. Choose Free translation to send recognized text to
+        Google, or AI translation to send it to Gemini using the API key you provide. Modes include Single page,
+        Auto pages, and AI Auto bubbles, which sends 1-5 OCR-ready bubbles per request and can use earlier pages
+        as context. You can tune OCR line batching and AI context, enable automatic Gemini model switching on
+        rate limits, and queue downloaded chapters under Settings &gt; Translation queue for background
+        pre-translation.
       </>
     ),
     gotchas: [
       'Online translation involves external services and transmits recognized text. Review the Privacy Policy before enabling it.',
       'Auto bubbles is AI-only. A smaller batch shows text sooner but uses more Gemini requests; a larger batch reduces request volume.',
+      'OCR model downloads can be large. Check the size shown under Settings > OCR models before downloading.',
       'Translation quality depends on the model and the key you supply; adjust the overlay text scale to fit the bubbles.',
     ],
   },

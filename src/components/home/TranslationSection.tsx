@@ -21,8 +21,10 @@ export function TranslationSection() {
             You do not need a pre-translated release. Mangora detects the text on the page, reads it on-device, translates
             it and draws it back over the artwork - with adjustable text scale so the overlay fits the bubbles.
             Auto pages waits for the full page; AI Auto bubbles sends 1-5 OCR-ready bubbles at a time for faster first
-            translations while keeping prior pages as context. You can also queue downloaded chapters for batch
-            pre-translation under Settings, so pages open instantly.
+            translations while keeping prior pages as context. Downloadable PP-OCR models recognize text on-device:
+            PP-OCRv6 covers Japanese, Chinese and English, while PP-OCRv5 covers Korean and Latin-script languages.
+            You can also queue downloaded chapters for batch pre-translation under Settings, so translated pages can
+            reopen from the saved translation cache.
           </p>
           <ol className="mt-8 grid gap-4 sm:grid-cols-3">
             {STEPS.map(({ Icon, title, body }, i) => (
