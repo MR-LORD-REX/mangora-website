@@ -9,6 +9,7 @@ import { ReleaseCard } from '../components/download/ReleaseCard'
 import { VersionHistory } from '../components/download/VersionHistory'
 import { AssetTable } from '../components/download/AssetTable'
 import { useReleases } from '../hooks/useReleases'
+import { useSecurityScans } from '../hooks/useSecurityScans'
 import { usePlatform } from '../hooks/usePlatform'
 import { softwareApplicationLd } from '../lib/seo'
 import { SITE_LINKS } from '../lib/links'
@@ -28,7 +29,8 @@ const ERRORS = {
 
 export default function Download() {
   const platform = usePlatform()
-  const { loading, stable, prerelease, error, latest, latestVersion, reload } = useReleases()
+  const { loading, releases, stable, prerelease, error, latest, latestVersion, reload } = useReleases()
+  const { scans, error: scanError } = useSecurityScans(releases)
 
   return (
     <>
@@ -66,7 +68,9 @@ export default function Download() {
             />
           ) : null}
 
-          {!loading && !error && latest ? <ReleaseCard release={latest} /> : null}
+          {!loading && !error && latest ? (
+            <ReleaseCard release={latest} scans={scans} scanError={scanError} />
+          ) : null}
 
           {!loading && !error && !latest ? (
             <ErrorCard
@@ -116,7 +120,11 @@ export default function Download() {
           </p>
         ) : null}
         {!loading && !error && stable.length + prerelease.length > 0 ? (
-          <VersionHistory releases={[...stable, ...prerelease]} />
+          <VersionHistory
+            releases={[...stable, ...prerelease]}
+            scans={scans}
+            scanError={scanError}
+          />
         ) : null}
         {!loading && !error && stable.length + prerelease.length === 0 ? (
           <p className="text-sm text-muted">

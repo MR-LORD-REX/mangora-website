@@ -1,9 +1,10 @@
-import { Calendar, Download, HardDrive, Package } from 'lucide-react'
+import { Calendar, Download, HardDrive, Package, ShieldCheck } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { Badge } from '../ui/Badge'
 import { formatBytes, formatDate } from '../../lib/format'
 import { parseApkAsset, releaseVersion, type Release } from '../../lib/github'
 import { SITE_LINKS } from '../../lib/links'
+import { securityScanKey, type SecurityScans } from '../../lib/securityScans'
 
 export function getApks(release: Release) {
   const parsed = release.assets.map(parseApkAsset).filter((a): a is NonNullable<typeof a> => a != null)
@@ -16,7 +17,15 @@ export function pickApk(release: Release) {
   return apks.find((apk) => /^arm64-v8a$/i.test(apk.abi)) ?? apks[0] ?? null
 }
 
-export function ReleaseCard({ release }: { release: Release }) {
+export function ReleaseCard({
+  release,
+  scans,
+  scanError,
+}: {
+  release: Release
+  scans: SecurityScans
+  scanError: boolean
+}) {
   const apk = pickApk(release)
   const apks = getApks(release)
   const version = releaseVersion(release)
@@ -57,17 +66,34 @@ export function ReleaseCard({ release }: { release: Release }) {
 
       <div className="mt-7 flex flex-wrap items-center gap-3">
         {apks.length > 0 ? (
-          apks.map((asset) => (
-            <Button
-              key={asset.name}
-              href={asset.url}
-              download
-              size="lg"
-              icon={<Download aria-hidden="true" className="size-5" />}
-            >
-              Download {asset.abi}
-            </Button>
-          ))
+          apks.map((asset) => {
+            const scan = scans[securityScanKey(version, asset.abi)]
+            return (
+              <div key={asset.name} className="inline-flex overflow-hidden rounded-full border border-line">
+                <Button
+                  href={asset.url}
+                  download
+                  size="lg"
+                  icon={<Download aria-hidden="true" className="size-5" />}
+                  className="rounded-none"
+                >
+                  Download {asset.abi}
+                </Button>
+                {scan ? (
+                  <Button
+                    href={scan.analysisLink}
+                    variant="secondary"
+                    size="lg"
+                    icon={<ShieldCheck aria-hidden="true" className="size-5" />}
+                    title={`SHA-256: ${scan.sha256}`}
+                    className="rounded-none"
+                  >
+                    Scan results
+                  </Button>
+                ) : null}
+              </div>
+            )
+          })
         ) : (
           <Button href={release.html_url} size="lg" icon={<Download aria-hidden="true" className="size-5" />}>
             Open on GitHub
@@ -77,6 +103,12 @@ export function ReleaseCard({ release }: { release: Release }) {
           All releases
         </Button>
       </div>
+
+      {scanError ? (
+        <p role="status" className="mt-4 text-xs text-muted">
+          VirusTotal scan links could not be loaded right now.
+        </p>
+      ) : null}
 
       {apks.length > 0 ? (
         <p className="mt-4 font-mono text-xs break-all text-muted">
