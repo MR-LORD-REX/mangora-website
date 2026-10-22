@@ -52,7 +52,7 @@ export function Hero() {
             </Button>
           </motion.div>
           <motion.p variants={item} className="mt-5 font-mono text-xs text-muted">
-            Latest release {SITE.version} &middot; ARM64 &middot; Android 7.0+
+            Latest release {SITE.version} &middot; ARM64 + ARMv7 &middot; Android 7.0+
           </motion.p>
         </motion.div>
 

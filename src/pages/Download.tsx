@@ -15,8 +15,8 @@ import { SITE_LINKS } from '../lib/links'
 
 const REQUIREMENTS = [
   { Icon: Smartphone, label: 'Android 7.0 or newer' },
-  { Icon: Package, label: 'ARM64 (arm64-v8a) device' },
-  { Icon: HardDrive, label: 'About 120 MB to install' },
+  { Icon: Package, label: 'ARM64 or 32-bit ARM device' },
+  { Icon: HardDrive, label: 'APK size varies by architecture' },
   { Icon: ShieldCheck, label: 'Allow install from unknown sources' },
 ]
 
@@ -34,7 +34,7 @@ export default function Download() {
     <>
       <Seo
         title="Download Mangora - Free Manga Reader APK for Android"
-        description="Download the latest Mangora APK for Android: free, ARM64, Android 7.0+, served from GitHub Releases, with offline downloads and built-in AI translation."
+        description="Download the latest Mangora APK for Android 7.0+: choose the ARM64 or 32-bit ARM build for your device. Includes offline downloads and on-device OCR with optional AI translation."
         path="/download"
         image="/assets/og/og-download.png"
         jsonLd={[softwareApplicationLd(latestVersion)]}
@@ -91,7 +91,8 @@ export default function Download() {
         </ul>
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <Badge tone="accent">arm64-v8a</Badge>
-          <p className="text-sm text-muted">32-bit ARM builds are not distributed.</p>
+          <Badge>armeabi-v7a</Badge>
+          <p className="text-sm text-muted">Choose the APK matching your Android system architecture.</p>
         </div>
       </Section>
 

@@ -38,7 +38,7 @@ export function softwareApplicationLd(version: string, screenshots: string[] = [
     softwareVersion: version,
     downloadUrl: `${SITE.url}/download`,
     installUrl: `${SITE.url}/download`,
-    softwareRequirements: 'Android 7.0 or newer, ARM64 device',
+    softwareRequirements: 'Android 7.0 or newer, ARM64 or 32-bit ARM device',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     isAccessibleForFree: true,
     license: 'https://github.com/MR-LORD-REX/mangora/blob/main/LICENSE',

@@ -3,7 +3,7 @@ import { Section } from '../ui/Section'
 import { Button } from '../ui/Button'
 import { LINKS } from '../../lib/links'
 
-const REQUIREMENTS = ['Android 7.0+', 'ARM64 (arm64-v8a)', '~120 MB', 'Signed APK from GitHub']
+const REQUIREMENTS = ['Android 7.0+', 'ARM64 or 32-bit ARM', 'Architecture-specific APK size', 'Signed APK from GitHub']
 
 export function InstallCta() {
   return (

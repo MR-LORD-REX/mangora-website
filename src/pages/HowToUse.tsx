@@ -23,7 +23,7 @@ const SECTIONS: GuideSection[] = [
       </>
     ),
     gotchas: [
-      'Android 7.0 or newer, on an ARM64 (arm64-v8a) device. 32-bit ARM builds are not published.',
+      'Android 7.0 or newer. Choose the APK matching your Android system: arm64-v8a for 64-bit ARM or armeabi-v7a for 32-bit ARM.',
       'If Play Protect flags the sideload, choose “Install anyway” — the APK is signed and the certificate is published.',
       'Updating never requires uninstalling: a newer APK installs straight over the older one.',
     ],

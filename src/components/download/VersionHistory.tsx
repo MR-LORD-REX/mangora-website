@@ -2,7 +2,7 @@ import { ExternalLink } from 'lucide-react'
 import { Badge } from '../ui/Badge'
 import { formatBytes, formatCount, formatDate } from '../../lib/format'
 import { releaseVersion, type Release } from '../../lib/github'
-import { pickApk } from './ReleaseCard'
+import { getApks, pickApk } from './ReleaseCard'
 
 function sizeOf(release: Release): number | null {
   const apk = pickApk(release)
@@ -31,7 +31,7 @@ export function VersionHistory({ releases }: { releases: Release[] }) {
         </thead>
         <tbody className="divide-y divide-line">
           {releases.map((release) => {
-            const apk = pickApk(release)
+            const apks = getApks(release)
             const size = sizeOf(release)
             return (
               <tr key={release.id} className="bg-surface">
@@ -46,11 +46,16 @@ export function VersionHistory({ releases }: { releases: Release[] }) {
                 <td className="px-4 py-3 text-muted">{formatCount(downloadsOf(release))}</td>
                 <td className="px-4 py-3">
                   <span className="flex flex-wrap items-center gap-3">
-                    {apk ? (
-                      <a href={apk.url} download className="text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent">
-                        APK
+                    {apks.map((asset) => (
+                      <a
+                        key={asset.name}
+                        href={asset.url}
+                        download
+                        className="text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+                      >
+                        {asset.abi}
                       </a>
-                    ) : null}
+                    ))}
                     <a
                       href={release.html_url}
                       target="_blank"

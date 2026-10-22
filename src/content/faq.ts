@@ -18,10 +18,6 @@ export const FAQ_ITEMS: FaqItem[] = [
     a: 'Yes. Download chapters as .cbz files to a folder you choose, queue them over Wi-Fi only, and read those saved chapters without a connection. Settings > Downloads can recover the chapter list from the downloads/metadata/metadata.json file in that folder.',
   },
   {
-    q: 'How does the reader image cache work?',
-    a: 'Mangora keeps images for up to two recently opened chapters in a temporary reader cache and shares them between viewing and translation. Downloaded chapters remain in your selected folder. By default, the temporary reader cache is cleared on a cold app start; change this in Settings > Data & Storage.',
-  },
-  {
     q: 'How does the AI page translation work?',
     a: 'Mangora draws a translated overlay on the page: local detection finds text regions, downloadable PP-OCR models read the text on-device, and the selected translation engine translates it. PP-OCRv6 covers Japanese, Chinese and English; PP-OCRv5 covers Korean and Latin-script languages. Gemini Auto bubbles can send 1-5 recognized bubbles per request and use earlier page text as context. You can also queue downloaded chapters for background pre-translation.',
   },
@@ -35,11 +31,11 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Which devices does Mangora support?',
-    a: 'Android 7.0 or newer on an ARM64 (arm64-v8a) device. 32-bit ARM builds are not supported. Mangora is Android-only - there is no iOS version.',
+    a: 'Android 7.0 or newer on ARM64 (arm64-v8a) or 32-bit ARM (armeabi-v7a) devices. Download the APK that matches your Android system architecture. Mangora is Android-only - there is no iOS version.',
   },
   {
     q: 'How do I install the APK?',
-    a: 'Download the latest mangora-arm64-v8a APK, then allow installs from unknown sources for your browser or file manager when Android prompts. Updates install over older versions without uninstalling.',
+    a: 'Download the latest APK that matches your device: arm64-v8a for 64-bit ARM Android or armeabi-v7a for 32-bit ARM Android. Allow installs from unknown sources for your browser or file manager when Android prompts. Updates install over older versions without uninstalling.',
   },
   {
     q: 'Is Mangora responsible for third-party extensions or content?',

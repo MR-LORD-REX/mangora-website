@@ -4,7 +4,7 @@ import { Section, SectionHeader } from '../ui/Section'
 import { Reveal } from '../ui/Reveal'
 
 const STEPS = [
-  { title: 'Install the APK', body: 'Grab the ARM64 build and allow installs from unknown sources on Android.', to: '/how-to-use#install' },
+  { title: 'Install the APK', body: 'Choose the ARM64 or 32-bit ARM APK that matches your Android system, then allow the install.', to: '/how-to-use#install' },
   { title: 'Choose an extension', body: 'Add a compatible extension repository and install the extension you choose.', to: '/how-to-use#extensions' },
   { title: 'Read and translate', body: 'Download an OCR model, then pick Single page, Auto pages or Auto bubbles in the reader.', to: '/how-to-use#translation' },
   { title: 'Download for offline', body: 'Queue chapters to a folder you choose and read them with no connection.', to: '/how-to-use#downloads' },

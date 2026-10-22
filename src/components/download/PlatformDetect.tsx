@@ -4,7 +4,7 @@ import type { Platform } from '../../lib/platform'
 const COPY: Record<Platform, { title: string; body: string }> = {
   android: {
     title: 'Looks like you are on Android',
-    body: 'Grab the ARM64 build below. Android 7.0 or newer, ARM64 (arm64-v8a) devices only - 32-bit ARM is not supported.',
+    body: 'Choose the APK that matches your Android system: arm64-v8a for 64-bit ARM or armeabi-v7a for 32-bit ARM. Android 7.0 or newer is required.',
   },
   ios: {
     title: 'Mangora is Android-only',
