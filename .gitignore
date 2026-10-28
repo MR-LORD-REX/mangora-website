@@ -1,8 +1,46 @@
-WEBSITE.md
-*.log
-.DS_Store
-node_modules
-/build
+# Dependencies
+node_modules/
 
+# Build output
+/build/
+dist/
+
+# Firebase deployment and emulator state
+.firebase/
+.firebase-debug.log*
+firebase-debug.log*
+ui-debug.log*
+database-debug.log*
+firestore-debug.log*
+pubsub-debug.log*
+storage-debug.log*
+firebase-export-*/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+service-account*.json
+
+# Local logs and caches
+*.log
+*.pid
+*.seed
+*.pid.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# Editor and operating system files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Project planning notes
+WEBSITE.md
 plan.md
-dist
